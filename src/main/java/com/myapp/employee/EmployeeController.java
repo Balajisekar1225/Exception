@@ -25,9 +25,11 @@ public class EmployeeController {
 	public String addEmployee(@RequestBody Employee e) throws AgeException {
 		return empSer.addEmployee(e);
 		
+		
 	}
 	@GetMapping(value="/getvalue/{id}")
-	public Employee getEmployee(@PathVariable int id)  {
+	public Employee getEmployee(@PathVariable int id) {
+		System.out.println("Hello world");
 	return empSer.getEmployee(id);
 	}
 	@PostMapping(value="/postEmployee")
